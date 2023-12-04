@@ -1,0 +1,20 @@
+/* 외부 스타일 시트.css */
+html,body,* {box-sizing:border-box;}
+/* ,html과 body */
+h1,h2,h3,h4,h5,h6,
+p,em,strong,a,span,sup,sub,del,q,blockquote,
+ul,ol,li,dl,dt,dd,
+table,tr,td,th,thead,tbody,tfoot
+form,fieldset,legend,input,select,option,button,label,textarea
+header,main,footer,nav,section,article,figcaption,figure,aside,
+address,details,mark,time,video,img,summary,iframe,div {
+    margin:0%; padding:0%;
+    font-size:1.0rem; font-style:normal; font-weight:normal;
+    line-height:1.2; color:#000;
+    text-decoration:none;
+}
+ul,ol,li {list-style:none;}
+button {cursor:pointer;} /* 커서를 포인터 모양으로 버튼에 마우스를 대면 손모양 */
+table,tr,td,th {border-collapse:collapse;} /* 한 줄로 나온다. */
+.skip {display: none;} /* html에서 의미적으로 존재하나 css디자인상에선 숨겨야하는 요소에 사용 ex)lable */
+/* 끝 23/12/04 https://jigsaw.w3.org/css-validator/validator - > 검사완료 */

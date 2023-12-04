@@ -1,0 +1,90 @@
+<!-- selector.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>선택자-1</title>
+    <style>
+        /* <내부 스타일 시트> */
+        /* 
+        1. 선택자{속성:값;} - > h1{color:}
+        2. css 언어로 디자인하는 대상 ex)태그 클래스 아이디 등 
+        3. {}중괄호 : 속성과 값을 묶어주는 선택자의 속성 묶음 표시
+        4. 속성 : 선택자에 적용하는 속성
+        5. 값 : 속성에 해당하는 값
+        6. ; 세미콜론 : 앞(좌측)의 속성값이 여기서 종료했다는 것을 의미함.
+        */
+
+        /* <css 색상속성>
+        color : 글자 색상
+        background-color : 배경색상
+        ex) <h1>제목</h1>
+        h1{color:red;}
+
+        <li>목록</li>
+        li{color:red;}
+
+        */
+        
+            /* class title의 이름을 가진 h1에 브라운
+            
+            title 그냥 뛰면 해당하는거 전부 찾기 
+            title>자식만 찾아라
+
+            <h1 id="heading">제목</h1>
+            ->
+            #heading{color:red;}
+            */
+
+            /* 순서대로 부모 자식 등으로 쓰기 - > 자손 선택자*/
+
+            /* .title{background-color: aquamarine;}
+            .title h1 {color: azure;}
+            .title .txt_wrap {background-color: blue;}
+            .title .txt_wrap .txt_1 {background-color:black;}
+            .title .txt_wrap .txt_1 ._sub_title {color: chocolate;}
+            .title .txt_wrap .txt_1 .name {color:brown;}
+            .title .txt_wrap .txt_1 .test {color:steelblue;} */
+            
+            /* 위에 따로도 해보기.
+            
+            <더 편하게 하는 방법>
+            .title {}
+            .title h1 {}
+            .title .txt_wrap {}
+            .title .txt_wrap .txt_1 {}
+            .title .txt_wrap .txt_1 .sub_title {}
+            .title .txt_wrap .txt_1 .name {}
+            .title .txt_wrap .txt_1 .test {}
+            */
+
+            /* 폭포 단계별로 선택자만 빈 중괄호로 나열하고 모든 선택자를 작성한 후 
+            중괄호 안 속성 : 값을 채운다.! */
+            .title {background-color: black;}
+            .title h1 {color: aliceblue;}
+            .title .txt_wrap {color:bisque;}
+            .title .txt_wrap .txt_1 {}
+            .title .txt_wrap .txt_1 .sub_title {}
+            .title .txt_wrap .txt_1 .name {}
+            .title .txt_wrap .txt_1 .test {}
+
+            /* html이 가지는 시각적인 형태를 초기화  - > reset css */
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Content</h1>
+        <div class="txt_wrap">
+            <div class="txt_1">
+                <p class="_sub_title">티빙 Top1 프로그램</p>
+                <p class="name">스트릿 우먼 파이터2</p>
+                <h2 class="test">제목테스트 h.test</h2>
+                <p class="test">p.test 내용테스트</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
