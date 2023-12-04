@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,5 +9,68 @@
 </head>
 <body>
     
+    <!-- emmet 자동완성기능  tap -->
+    <!--1. 태그만 입력하고 tag! 
+        2. > 자식 
+        3. + 형제 
+        4. . 클래스
+        5. # 아이디
+        ----------------------------------------------------------------------------------
+        ex) header+main+footer
+        => header + main + footer 모두 형제로 만든다. 
+
+        ex) header>h1+nav>a*3>span
+        => header 안 자식 h1, nav 형제를 두고 nav 안 a를 3개를 만들고 각 a 안에 span를 만든다.
+
+        ex) main>section#contents>div.main*3 - > div#은 안된다 - > id는 한개만 존재
+        => main자식으로 section을 아이디 contents를 붙여 생성하고 
+        그 자식으로 main이란 클래스명의 div 3개 만들기    
+    -->
+
+    <h1>title</h1>
+    <p>p*3 - > tap</p>
+    <p>이렇게</p>
+    <p>늘어난다.</p>
+    <p>p*1</p>
+    <!--  -->
+    <ul>
+        <li>ul>li*2</li>
+        <li></li>
+    </ul>
+    <ul>
+        <li>ul>li*1</li>
+    </ul>
+    <!--  -->
+    <ol>
+        <li><a href="#">ol>li*3>a</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+    </ol>
+    <ol>
+        <li><a href="#">ol>li*3>a</a></li>
+    </ol>
+    <!--  -->
+    <p><span>p>span+em</span><em></em></p>
+    <p><span>p>span+em</span><em></em></p>
+    <!--  -->
+    <div class="a">div.a</div>
+    <div class="a">div.a</div>
+    <!--  -->
+    <section id="b">section#b</section>
+    <section id="b">section#b</section>
+    <!-- class id는 모든 태그에 줄 수 있다. -->
+    <img src="" alt="img src + tap">
+    <video src="">video + tap</video>
+    <video src="">video + tap 누르기</video>
+    <!-- 자식은 >(꺽새) 형제는 + -->
+    <input type="input + tap">
+    <input type="radio" name="input radio" id="">
+    <!--  -->
+    <select name="select>option*2" id="">
+        <option value=""></option>
+        <option value=""></option>
+    </select>
+    <!-- 끝 -->
+
 </body>
 </html>
