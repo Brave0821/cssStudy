@@ -16,23 +16,37 @@
     <!--  -->
     <style>
         main {background-color: brown;}
-        main .first {}
+        main .first {
+            background-color: rgba(255,255,0,0.3);
+        }
         main .first h1 {
             font-family: 'Noto Sans KR', sans-serif;
+            /* font-size:3.125rem; */
             /* font-family:"noto sans kr","serif"; */
             /* font-family:"궁서3","sanserif"; */
+            font-size: 1.25rem; /* 20px */
+            color: #03c75a;
         } /* 폰트패밀리는 대표글꼴이 문제가 생기면 인식하는 보조글꼴; */
         main .first p {
             /* 점심 이후에 추가 */
-            font-family: 'Black Han Sans', sans-serif; 
+            font-family: 'Black Han Sans', sans-serif;
+            font-size: 1.0rem; /* 16px */
+            /* font: size 20px;  */
+            color: rgba(255,0,0,0.75);
+            line-height: 1.7;
         }
         /* 처음에 main .first h1 하면 h1 잡은 것  
         class. id# tag면 빈칸 */
         main .second {}
         main .second h1 {
             font-family: 'Black Han Sans', sans-serif;
+            font-size: 2.25rem;
+            /* 36px - > 2.25em 변환기 상 - >em -> rem */
         }
-        main .second p {}
+        main .second p {
+            font-size: 1.375rem;
+            /* 22px - > 1.375em */
+        }
     </style>
 </head>
 <!-- head 끝 body 시작 -->
@@ -40,7 +54,7 @@
     <main>
         <section class="first">
             <h1>제목1-1</h1>
-            <p>내용</p>
+            <p>pigma와<br>css</p>
         </section>
         <section class="second">
             <h1>제목1-2</h1>
