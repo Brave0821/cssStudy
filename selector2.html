@@ -33,7 +33,7 @@
             font-size: 1.0rem; /* 16px */
             /* font: size 20px;  */
             color: rgba(255,0,0,0.75);
-            line-height: 1.7;
+            line-height: 1.7; /*  */
         }
         /* 처음에 main .first h1 하면 h1 잡은 것  
         class. id# tag면 빈칸 */
@@ -42,10 +42,13 @@
             font-family: 'Black Han Sans', sans-serif;
             font-size: 2.25rem;
             /* 36px - > 2.25em 변환기 상 - >em -> rem */
+            letter-spacing:-0.5px;
         }
         main .second p {
             font-size: 1.375rem;
             /* 22px - > 1.375em */
+            letter-spacing: -0.5px;
+            word-spacing: -1px; /* 단어와 단어사이 */
         }
     </style>
 </head>
@@ -58,7 +61,7 @@
         </section>
         <section class="second">
             <h1>제목1-2</h1>
-            <p>내용</p>
+            <p>css는 외부스타일시트와 내부스타일시트로 작성할 수 있다.</p>
         </section>
     </main>
 </body>
