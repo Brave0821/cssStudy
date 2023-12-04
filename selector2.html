@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>선택자-2</title>
+    <!-- 구글 폰트 웹 글꼴연결 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 점심 이후 추가 -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <!-- 더 추가 Second h1 -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css"> <!-- 모든 사람의 환경에서 보이게 만듬  가장 밑에 만들기!.-->
+    <!--  -->
+    <style>
+        main {background-color: brown;}
+        main .first {}
+        main .first h1 {
+            font-family: 'Noto Sans KR', sans-serif;
+            /* font-family:"noto sans kr","serif"; */
+            /* font-family:"궁서3","sanserif"; */
+        } /* 폰트패밀리는 대표글꼴이 문제가 생기면 인식하는 보조글꼴; */
+        main .first p {
+            /* 점심 이후에 추가 */
+            font-family: 'Black Han Sans', sans-serif; 
+        }
+        /* 처음에 main .first h1 하면 h1 잡은 것  
+        class. id# tag면 빈칸 */
+        main .second {}
+        main .second h1 {
+            font-family: 'Black Han Sans', sans-serif;
+        }
+        main .second p {}
+    </style>
+</head>
+<!-- head 끝 body 시작 -->
+<body>
+    <main>
+        <section class="first">
+            <h1>제목1-1</h1>
+            <p>내용</p>
+        </section>
+        <section class="second">
+            <h1>제목1-2</h1>
+            <p>내용</p>
+        </section>
+    </main>
+</body>
+</html>
+<!--  -->
