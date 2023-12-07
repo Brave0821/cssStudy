@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>float-1</title>
+    <link rel="stylesheet" href="../day4_float_flex/styles/reset.css">
+    <style>
+        .box {
+            background-color: teal;
+            /* height: 150px; */ 
+            overflow: hidden; 
+        } /* block라서 */
+        .box p {
+            width: 150px; height: 150px;
+            font-size: 5rem;
+        } /* 공통 */
+        .box > p:nth-child(1) {
+            background-color: blueviolet;
+            float: left; /* 부모에서 가출한다. */
+        } /* 개별 */
+        .box > p:nth-child(2) {
+            background-color: yellow;
+            float: left;
+        }
+        .box .right {float: right;}
+        .box .right p:nth-last-child(2){
+            background-color: violet;
+            float: left;
+            /* float: right; */
+        }        
+        .box p:last-child {
+            background-color: sienna;
+            float: left;
+        }        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>a</p>
+        <p>b</p> 
+    <div class="right">
+        <p>c</p> 
+        <p>d</p> 
+        </div>
+    </div>
+</body>
+</html>
+<!-- float 쓸때 크기를 인식 못하기에 스스로 크기를 주거나 크기를 잡아올때?
+clear:both;  -->
