@@ -1,0 +1,62 @@
+/* <!-- 글꼴 -->
+<!-- font-family: 'Gothic A1', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+ --> */
+.id { background-color: #d3d3d3;}
+.id header {}
+.id header a {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 2rem;
+    display: flex;
+    /* align-items: center; */
+    /* flex-flow: row nowrap; */
+    justify-content: left;
+    background-color: #15400e;
+    color: #f3f3f3;
+}
+/* wrap 시작 */
+.id .wrap {
+    display: flex;
+    justify-content: center;
+}
+.id .wrap main {}
+.id .wrap main h1 {
+    font-family: 'Whisper', cursive;
+    font-size: 7rem;
+    color: #fff;
+    background-color: #a9a9a9;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    
+}
+.id .wrap main .plants {}
+.id .wrap main .plants p {
+    /* border: 3px solid #333; */
+    font-family: 'Noto Sans KR', sans-serif;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.id .wrap main .plants p img {
+    border: 5px solid #f3f3f3;
+}
+.id .wrap main .plants .content_font {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.id .wrap main .contents {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2rem;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+/* footer 시작 */
+.id footer {
+    font-family: 'Noto Sans KR', sans-serif;
+}
