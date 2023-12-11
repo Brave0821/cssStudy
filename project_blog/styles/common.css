@@ -1,0 +1,36 @@
+/* 공통 header main footer css */
+/* header */
+.id { background-color: #d3d3d3;}
+.id header {}
+.id header a {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 2rem;
+    display: flex;
+    /* align-items: center; */
+    /* flex-flow: row nowrap; */
+    justify-content: left;
+    background-color: #15400e;
+    color: #f3f3f3;
+}
+.id header a img {
+    width: 60px; 
+    margin: 10px;
+    border: 1px solid #fff;
+}
+/* main 시작 */
+.id .wrap main {}
+.id .wrap main h1 {
+    font-family: 'Whisper', cursive;
+    font-size: 7rem;
+    color: #fff;
+    background-color: #a9a9a9;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    
+}
+/* footer 시작 */
+.id footer {
+    font-family: 'Noto Sans KR', sans-serif;
+}

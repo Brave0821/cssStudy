@@ -1,0 +1,47 @@
+/* plants_supplies | 화분&용품 */
+main {height:100vh;}
+main h1 {}
+main h2 {
+    font-size: 1.5rem;
+    color: #222;
+    display: flex;
+    justify-content: center;
+}
+main h2 em {
+    font-size: 0.8rem;
+    color: crimson;
+}
+main .plants_plan {
+    background-color: grey;
+    width: 90%;
+    margin: 50px auto 0;
+}
+main .plants_plan thead {
+    border-bottom: 2px solid #222;
+} /* 밑에 테두리 */
+main .plants_plan thead tr {}
+main .plants_plan thead tr th {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+main .plants_plan thead tr th:nth-child(2) {width: 70px;}
+main .plants_plan tbody {
+    background-color: #f1f1f1;
+}
+main .plants_plan tbody tr {}
+main .plants_plan tbody tr td {
+    padding: 10px;
+    border-bottom: 1.0px solid #222;
+
+}
+main p {
+    font-size: 1rem;
+    /* width: 90%; */
+    margin: 0px;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+

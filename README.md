@@ -56,3 +56,17 @@
 7. (선택) item의 태그순서와 다르게 화면에서 보이는 순서를 다르게 하고 싶다면 `order:값`
 8. (선택) item의 너비값을 전체 부모 기준으로 일정하게 ㅅㄹ정하고 싶다면? `flex:값`
 --------------------------------------------------------------------------------
+
+# project blog 23/12/08 
+## title : 작은 가든 만들기 
+* index.html(main)
+* plants_kind.html(어울리는 식물소개)
+* plants_supplies.html(화분&용품)
+* plants_raise.html(내가키우는식물)
+* ※ 모든 html은 서로 '뒤로/앞으로' 기능없이 이동할 수 있어야한다.
+------------
+## 공통영역 HTML, CSS 
+* 모든 HTML 공통으로 존재해야하는 HTML = > header , main(내용만 제거), footer
+* CSS 공통영역 == > reset, common.css(Header , main, footer)
+* CSS 개별영역 == > index.html, plants_kind.html(어울리는 식물소개), plants_supplies.html(화분&용품) plants_raise.html(내가키우는식물) 메인의 내용영역 
+---------

@@ -2,20 +2,19 @@
 <!-- font-family: 'Gothic A1', sans-serif;
 font-family: 'Noto Sans KR', sans-serif;
  --> */
-.id { background-color: #d3d3d3;}
+/* .id { background-color: #d3d3d3;}
 .id header {}
 .id header a {
     font-family: 'Gothic A1', sans-serif;
     font-size: 2rem;
     display: flex;
-    /* align-items: center; */
-    /* flex-flow: row nowrap; */
+
     justify-content: left;
     background-color: #15400e;
     color: #f3f3f3;
-}
+} */
 /* wrap 시작 */
-.id .wrap {
+/* .id .wrap {
     display: flex;
     justify-content: center;
 }
@@ -30,7 +29,8 @@ font-family: 'Noto Sans KR', sans-serif;
     margin-bottom: 10px;
 
     
-}
+} */
+/* <index.html main> 전용 */
 .id .wrap main .plants {}
 .id .wrap main .plants p {
     /* border: 3px solid #333; */
@@ -57,6 +57,6 @@ font-family: 'Noto Sans KR', sans-serif;
     align-items: center;
 }
 /* footer 시작 */
-.id footer {
+/* .id footer {
     font-family: 'Noto Sans KR', sans-serif;
-}
+} */
