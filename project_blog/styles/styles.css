@@ -31,6 +31,17 @@ font-family: 'Noto Sans KR', sans-serif;
     
 } */
 /* <index.html main> 전용 */
+.id { background-color: #d3d3d3;}
+.id header {}
+.id header h1 {}
+.id header h1 img {}
+.id header .rain {
+    object-fit: cover;
+}
+.id header .rain a {
+
+}
+
 .id .wrap main .plants {}
 .id .wrap main .plants p {
     /* border: 3px solid #333; */
@@ -42,6 +53,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .id .wrap main .plants p img {
     border: 5px solid #f3f3f3;
 }
+
 .id .wrap main .plants .content_font {
     font-size: 2rem;
     display: flex;

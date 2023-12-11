@@ -60,9 +60,9 @@
 # project blog 23/12/08 
 ## title : 작은 가든 만들기 
 * index.html(main)
-* plants_kind.html(어울리는 식물소개)
+* plants_kind.html(식물소개)
 * plants_supplies.html(화분&용품)
-* plants_raise.html(내가키우는식물)
+* plants_raise.html(식물관리)
 * ※ 모든 html은 서로 '뒤로/앞으로' 기능없이 이동할 수 있어야한다.
 ------------
 ## 공통영역 HTML, CSS 

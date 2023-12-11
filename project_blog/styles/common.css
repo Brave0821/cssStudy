@@ -6,8 +6,7 @@
     font-family: 'Gothic A1', sans-serif;
     font-size: 2rem;
     display: flex;
-    /* align-items: center; */
-    /* flex-flow: row nowrap; */
+
     justify-content: left;
     background-color: #15400e;
     color: #f3f3f3;
@@ -15,7 +14,7 @@
 .id header a img {
     width: 60px; 
     margin: 10px;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
 }
 /* main 시작 */
 .id .wrap main {}

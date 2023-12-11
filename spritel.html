@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        ul {}
+        ul .spritel {
+            background-image: url(./images/icon_set1.png);
+            background-repeat:no-repeat;
+            width: 24px; height: 24px;
+        }
+        ul .spritel:nth-child(1) {
+            text-indent:-9999px;
+        }
+        ul .spritel:nth-child(2) {
+            text-indent:-9999px;
+            background-position-x:-24px;
+        }
+        ul .spritel:nth-child(3) {
+            text-indent: -9999px;
+            background-position-x:-48px;
+        }
+        ul .spritel:nth-child(4) {
+            text-indent : -9999px;
+            background-position-x:-72px;
+        }
+        ul .spritel:nth-child(5) {
+            text-indent: -9999px;
+            background-position-x:-96px;
+        }
+        /* weather   */
+        .weather {
+        }
+        .weather li {
+            background-image: url(./images/icon_set2.png);
+            background-repeat: no-repeat;
+            width: 24px; height: 24px;
+        }
+        .weather .snow {
+            text-indent:-9999px;
+            background-position-x:-7px; 
+        }
+        .weather .rain {
+            text-indent:-9999px;
+            background-position-x:-30px; 
+        }
+        .weather .lightning {
+            text-indent:-9999px;
+            background-position-x:-55px;
+        }
+        .weather .sun {
+            text-indent:-9999px;
+            background-position-x:-77px;
+        }
+    </style>
+</head>
+<body>
+    <h1>스프라이트 이미지</h1>
+    <p>작은 이미지들을 쉽게 정리하고 구분하기 위해서 만드는 이미지 방식</p>
+    <p>장점 페이지 로딩속도 단축, 이미지 관리 간편 등 </p>
+    <p>img태그 구성x 인라인 블록요소를 별도로 제작해두고 그 대상에 background속성으로 이미지를 관리하는 방식.</p>
+    <p><img src="#" alt="대체텍스트"></p>
+    <p>대체텍스트</p>
+    <ul>
+        <li class="spritel">홈으로</li>
+        <li class="spritel">좋아요</li>
+        <li class="spritel">마이페이지</li>
+        <li class="spritel">장바구니</li>
+        <li class="spritel">알림설정</li>
+    </ul>
+    <ul class="weather">
+        <li class="snow">눈</li>
+        <li class="rain">비</li>
+        <li class="lightning">번개</li>
+        <li class="sun">해</li>
+    </ul>
+</body>
+</html>
