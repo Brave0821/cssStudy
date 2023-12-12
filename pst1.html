@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>position-1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        #all {
+            background-color: silver;
+            width: 500px;
+            height: 500px;
+            padding: 20px;
+            margin: 20px;
+            /* absolute의 부모에게 잡기 명령 설정하기 = 다른 포지션중에 적합한 대상 입력하기. 
+            (필수 후보 모두 가능하지만 일반적으로 relative를 가장 많이 사용한다.(위치 고정이 가능하기에))
+            */
+            position: relative;
+            /* 벽에 붙는다. 밖을 안 벗어난다. */
+        }
+
+        #all .box {
+            width: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        #all .a {
+            background-color: teal;
+        }
+
+        #all .b {
+            /* relative; */
+            background-color: tan;
+            /* position: relative; left: 150px; top : 50px;   */
+            position: absolute;
+            right: 0;
+        }
+
+        #all .c {
+            background-color: white;
+        }
+
+        /* nav+position 연습 */
+        
+        header {
+            background-color: turquoise;
+            /* width: 1134px; margin:0 auto; */
+            width: calc(100% - 30px);
+            margin: 0 auto;
+            height: 110px;
+        }
+
+        header .top {
+            background-color: tomato;
+            height: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            text-align: center;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        header .top h1 {
+            width: 120px;
+            height: 80px;
+            background-color: yellowgreen;
+        }
+
+        header .top nav {}
+
+        header .top nav .gnb {
+            /* li 형제 2개를 옆으로 정렬하고 싶다 - > 정렬 - > flex */
+            /* flex가 필요하면 누구한테 준다? 정렬대상의 부모 "gnb" */
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        /* ul */
+        header .top nav .gnb>li {
+            background-color: violet;
+            /* 서브 lnb에 absolute 부모 기준 */
+            position:relative;         
+        }
+
+        header .top nav .gnb>li>a {
+            background-color: slateblue;
+            padding: 10px 30px;
+            /* 적용 후 겹치는 현상 a가 인라인이기 떄문에 */
+            display: block;
+            /* 해결을 위해 부모한테 flex를 줘야하는가 a한테 black를 줘야하는가? */
+            /* 부모에 flex를 준다는 뜻은> 부모 안 자식들의 정렬방향 및 방법정하기 */
+            /* a block준다는 뜻은 인라인을 블록으로 변경하는 속성 변경 인라인 블록은 여백이 들어가기에. */
+        }
+
+        header .top nav .gnb>li :nth-child(1) {}
+
+        header .top nav .gnb>li :nth-child(2) {}
+
+        header .top nav .gnb>li .lnb {
+            
+            background-color: teal;
+            position : absolute;
+            left: 0; width: 100%;
+        }
+
+        header .top nav .gnb>li .lnb li {}
+
+        header .top nav .gnb>li .lnb li a {}
+
+        header .top nav .gnb>li .lnb li :nth-child(1) {}
+
+        header .top nav .gnb>li .lnb li :nth-child(2) {}
+
+
+        /* GUESS 시작 */
+
+#guess {
+    background-color: yellow;
+    display: flex; flex-flow: row nowrap;
+    width: 1134px; height: 110px;
+}
+#guess h1 {
+    background-color: violet;
+    margin-right: 40px; width: 100px; height: 60px;
+}
+#guess nav {}
+#guess nav .gnb {
+    /* background-color: darkgreen; */
+    display: flex; flex-flow: row nowrap;
+    
+}
+#guess nav .gnb > li {
+    position: relative;
+}
+#guess nav .gnb > li:nth-child(1) {}
+#guess nav .gnb > li:nth-child(2) {}
+#guess nav .gnb > li > a {
+    background-color: green;
+    width: 130px; padding:7px 0px;
+    display: block;
+    text-align: center;
+}
+#guess nav .gnb > li .lnb {
+    display: flex;
+    flex-flow: row nowrap;
+    /* position: absolute;
+    left: 0; width: max-content; 
+    absoult 적용 대상은 width값을 반드시 함께 입력해야한다.
+    보통 부모 대상의 100% 로 width 100% 라고 입력하거나 .. 
+    부모 기준이 아닌 자식 기준일 경우 자식의 개수가 항상 고정이 아니고 유동적일 경우 자동으로 맞춰질 수 있도록 자식의 최대 크기 기준으로 max-content라고 입력한다.
+    */
+}
+#guess nav .gnb > li .lnb li:nth-child(1) {}
+#guess nav .gnb > li .lnb li:nth-child(2) {}
+#guess nav .gnb > li .lnb li:nth-child(3) {}
+#guess nav .gnb > li .lnb li a {
+    background-color: tomato;
+    padding: 10px 30px;
+    display: block;
+    
+}
+</style>
+</head>
+
+<body>
+    <div id="all">
+        <p class="box a">A</p>
+        <p class="box b">B</p>
+        <p class="box c">C</p>
+    </div>
+    <hr> 
+    <!--  -->
+    <header>
+        <div class="top">
+            <h1>로고</h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">메인메뉴1</a>
+                        <ul class="lnb">
+                            <li><a href="#">메뉴1-서브1</a></li>
+                            <li><a href="#">메뉴1-서브2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메인메뉴2</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <div id="guess">
+        <h1>GUESS</h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">여성</a></li>
+                <li><a href="#">남성</a>
+                    <ul class="lnb">
+                        <li><a href="#">아우터</a></li>
+                        <li><a href="#">티셔츠</a></li>
+                        <li><a href="#">셔츠</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
+<!-- 
+    position의 필수 속성 (3개 중 하나 택)
+    1. relative(본인위주, 현재 위치한 위치로 이동해도 위치 공백?이 남는다.) 2. absolute(자기 위치 무시.) 3. fixed 
+    
+    position의 선택 속성 (쓰고 싶으면 위에 3개 중 하나 택)
+    1.top 2.bottom(y축) | 3.left 4.right(x축)
+    
+    /*  relative: 다른 위치로 이동해도 내 자리가 남고 다시 돌아와도 위치 남음 자기 위치 기억. */
+    
+-->

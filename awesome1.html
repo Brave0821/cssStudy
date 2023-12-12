@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>form 꾸미기</title>
+    <!-- font-awesome 사용 시 필수 LINK URL (버전확인하고 연결!) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .icon li .fa-earth-asia {color: blue; font-size: 15px;}
+        .icon li .fa-leaf {color: green; font-size: 25px;}
+        .icon li .fa-seedling {color: darkgreen; font-size: 30px;}
+        .icon li .fa-tree {color: darkgreen; font-size: 20px;}
+        .icon li .fa-plane {color: blue; font-size: 10px;}
+        /* unicode */
+        /* icon1의 가상(::) 자식요소 만들기  첫째 자식 before, 마지막 자식 after*/
+        /* 가상 자식요소의 내용을 삽입해주는 속성 content */
+        /* font-awesome의 유니코드 이용 CONTENT 삽입시에는 \(역슬래쉬)
+        UICODE앞에 반드시 삽입하고 적용하기 */
+        /* UNICODE로 font-awesome 삽입 시에는 반드니 UNICODE 삽입한 태그 대상에 font-awesome 전용의 FOUNT-FAMILY가 설정되어 있어야한다. */
+        h1::before {content: '\f4d8';} 
+        .icon .icon1 {}
+        .icon .icon2 {}
+        .icon .icon3 {
+            font-size: 1.5rem;
+            color: green;
+        }
+        .icon .icon4 {
+            font-size: 1.5rem;
+            color: darkgreen;
+        }
+        /*  */
+        .icon .icon1::after {content: '\f4d8';}
+        .icon .icon2::after {content: '\f57e';}
+        .icon .icon3::before {content: '\f06c';}
+        .icon .icon4::before {content: '\f1bb';}
+        .icon .icon5::after {content: '\f072';}
+        /* form 체크박스 꾸미기  f058 로그인 상태유지 옆 체크박스 icon 적용 */
+        #designFrm fieldset ul li #chk {appearance: none;} /* 앞에 체크박스 안보이게 */
+        /* 앞에 안보기에 남,여 체크박스 */
+        #designFrm fieldset ul li #ra1 {appearance: none;}
+        #designFrm fieldset ul li #ra2 {appearance: none;}
+        #designFrm fieldset ul li #chk + label {
+            
+            background-color: turquoise;
+        }
+        /* 남 앞 바꾸기.*/
+        #designFrm fieldset ul li #ra1 + label::before {
+            content: '\f192'; color: #aaa;
+        }
+
+        /* 여 앞 바꾸기.*/
+        #designFrm fieldset ul li #ra2 + label::before {
+            content: '\f192'; color: #aaa;
+        }
+        /* ---------------------------------------------------- */
+        #designFrm fieldset ul li #chk + label::before {
+            /* 체크 비활성화 */
+            content: '\f058'; color: #aaa;
+        }
+        #designFrm fieldset ul li #chk:checked + label::before {
+            /* 체크 활성화  content 유니코드가 동일하기에  생략*/
+            color:#0000ff;
+        }
+        /* ---------------------------------------------------- */
+        /* 남 앞 바꾸기. class에 fa추가  */
+        #designFrm fieldset ul li #ra1:checked + label::before {
+            content: '\f192'; color: #0000ff; /* 변경 */
+        }
+
+        /* 여 앞 바꾸기. class에 fa추가  */
+        #designFrm fieldset ul li #ra2:checked + label::before {
+            content: '\f192'; color: #0000ff; /* 변경 */
+        }
+
+        /* li #chk + label 위에 입력 후 밑에 fa 추가 */
+    </style>
+</head>
+<body>
+    <h1 class="fa" >font-awesome</h1>
+    <!--  -->
+    <p>웹 주소로 아이콘을 사용할 수 있게 해주는 기능</p>
+    <p>font-awesome을 아이콘으로 삽입하는 경우 동적기능 없이 단순 표시 </p>
+    <p>font-awesome을 unocide로 삽입하는 경우 - > 사용자의 동작으로 동적기능의 변화가 필요할 때 css로 삽입</p>
+    <ul class="icon">
+        <!-- 대부분 -->
+        <li><i class="fa-solid fa-seedling"></i></li>
+        <li><i class="fa-solid fa-leaf"></i></li>
+        <li><i class="fa-solid fa-tree"></i></li>
+        <li><i class="fa-solid fa-earth-asia"></i></li>
+        <li><i class="fa-solid fa-plane"></i></li>
+        <!-- unicode 첵 박스랑 라디오 박스에서만 -->
+        <li class="icon1 fa">1</li>
+        <li class="icon2 fa">2</li>
+        <li class="icon3 fa">3</li>
+        <li class="icon4 fa">4</li>
+        <li class="icon5 fa">5</li>
+    </ul>
+    <!-- https://fontawesome.com/icons/seedling?f=classic&s=solid -->
+    <form action="#" method="get" id="designFrm">
+        <fieldset>
+            <legend class="skip">폼 디자인 구성</legend>
+            <ul>
+                <li><input type="text" id="text"></li>
+                <li>
+                    <input type="checkbox" name="chk" id="chk">
+                    <label for="chk" class="fa">로그인상태유지</label> <!-- 위에 id = for  class="fa" 추가 -->
+                </li>
+                <li>
+                    <input type="radio" name="ra" id="ra1"> 
+                    <label for="ra1" class="fa">남</label>
+                    <input type="radio" name="ra" id="ra2">
+                    <label for="ra2" class="fa">여</label>
+                </li>
+                <!-- id는 단 한번만 들어갈 수 있다. -->
+                <li><select name="sele" id="sele">
+                        <option value="none">data1</option>
+                        <option value="none">data2</option>
+                    </select>
+                </li>
+                <li><button type="button">button</button></li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
+<!-- ## form 요소 중 입력요소 및 목록, 버튼 요소 등은 css로 자유롭게 디자인ㅇ 가능하나 선택요소(radio, checkbox)는 
+자체적인 고정 html기능으로 css로 디자인 편집이 불가능하다.! 
+그럼 디자인 하고 싶으면? - > css로 raido checkbox를 숨기고 그 자리에 이미지를 대체 산입하여 동적 기능으로 마무리해야한다.
+
+/* 유니코드 font-awesome 필수 |-> 폰트 패밀리 font-weight */
+-->

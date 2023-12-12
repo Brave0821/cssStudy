@@ -70,3 +70,48 @@
 * CSS 공통영역 == > reset, common.css(Header , main, footer)
 * CSS 개별영역 == > index.html, plants_kind.html(어울리는 식물소개), plants_supplies.html(화분&용품) plants_raise.html(내가키우는식물) 메인의 내용영역 
 ---------
+
+
+        /* GUESS 시작 */
+
+        #guess {
+            background-color: turquoise;
+            /* width: 1134px; margin:0 auto; */
+            width: calc(100% - 32px);
+            margin: 0 auto;
+            display: flex; flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            height: 110px;
+        }
+        #guess h1 {margin-right:44px; width: 100px; height: 60px;}
+        #guess nav {}
+        #guess nav .gnb {display: flex; flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        #guess nav .gnb > li {
+            /* background-color: violet;
+            display: flex; flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center; */
+        }
+        #guess nav .gnb > li:nth-child(1) {}
+        #guess nav .gnb > li:nth-child(2) {}
+        #guess nav .gnb > li > a {
+            background-color: slateblue;
+            padding: 7px 0px;
+            width: 130px;
+            display:block;
+            text-align: center;
+        }
+        #guess nav .gnb > li > .lnb {
+            display: flex; flex-flow: row nowrap;
+        }
+        #guess nav .gnb > li > .lnb li {}
+        #guess nav .gnb > li > .lnb li :nth-child(1) {}
+        #guess nav .gnb > li > .lnb li :nth-child(2) {}
+        #guess nav .gnb > li > .lnb li :nth-child(3) {}
+        #guess nav .gnb > li > .lnb li a {
+            padding: 10px 30px; background-color: aqua; display: block;
+        }
