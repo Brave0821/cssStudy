@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>pst2</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        #popup1 {
+            background-color: white;
+            width: 200px; height: 200px;
+            border-radius: 10px;
+            border: 1px solid black;
+            position: fixed; /* 스크롤 관계없이 화면에 고정 */
+            left: 100px; top: 100px; /* 좌표입력시 원하는 위치로 이동 밑이랑 같은 포지션 친구들 */
+            z-index: 200; /* 포지션이 들어가면 쓸 수 있다. 위로 올리는거? */
+        }
+        #popup2 {
+            background-color: teal;
+            width: 300px; height: 300px;
+            border-radius: 10px;
+            border: 1px solid black;
+            position: fixed; /* 스크롤 관계없이 화면에 고정 */
+            left: 200px; top: 200px; /* 좌표입력시 원하는 위치로 이동 */
+            z-index: 100;
+        }
+        #wrap {}
+        #wrap header {
+            background-color: yellow;
+            height: 80px; text-align: center; /* 인라인이 있을때 가운데로 보냄. 글자도 포함. a=css 인라인. */
+            position: sticky; top: -20px; /* 달라붙는다. */
+        }
+        #wrap header * {border: 1px solid black;}
+        #wrap header h1 {}
+        #wrap header nav {
+            display: inline-block; 
+            /* 인라인 블록으로 변환해서 중앙으로 옮김 위에  text-align: center; 는 */
+        }
+        #wrap header nav .gnb {
+            display: flex;
+            
+        }
+        /* li의 부모에게만 flex 사용 */
+        #wrap header nav .gnb > li {
+            /* width: 100px; */
+            position: relative;
+
+        }
+        /*2. 메인메뉴에 마우스를 올렸을때 조건 생성  */
+        #wrap header nav .gnb > li:hover .lnb {display: flex;}
+        /* gnb에 마우스를 올렸을때 lnb가 나타날 수 있게 */
+        #wrap header nav .gnb > li > a {
+            width: 100px; display: block;
+            padding: 7px 0; 
+            /* 선택영역 여유 상하 */
+        }
+        #wrap header nav .gnb > li > .lnb {
+            display: flex;
+            /* flex-flow:; 생략. */
+            position: absolute;
+            left: 0; width: 0%; 
+            /* left absolute 시작위치 */
+            width: max-content;
+            display: none; /* 1. 숨기기  */
+        }
+        #wrap header nav .gnb > li > .lnb li {}
+        
+        #wrap header nav .gnb > li > .lnb li a {
+            padding: 10px 40px;
+            display: inline-block;
+            /* 블록만들면 겹치는 문제 해결 */
+        }
+        #wrap main {
+            background-color: yellowgreen;
+            height: 200vh;
+        }
+        #wrap footer {
+            background-color: violet;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 일회성 이벤트, 공지사항 팝업 -->
+    <div id="popup1">중요 이벤트1 :D
+        z-index: 200;으로 올림.
+    </div>
+    <div id="popup2">이벤트2 :)</div>
+    <!-- 사이트 시작! -->
+    <div id="wrap">
+        <header>
+            <h1>로고</h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a>
+                        <ul class="lnb">
+                            <li><a href="#">sub1</a></li>
+                            <li><a href="#">sub2</a></li>
+                            <li><a href="#">sub3</a></li>
+                        </ul>
+                        <li><a href="#">menu3</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>
+<!-- 
+    서브메뉴 만들기.
+
+    1. 서브를 숨기기 메인메뉴만 보이게 (display:none - > lnb(서브 큰 틀)) display : none 
+    #wrap header nav .gnb > li > .lnb { - >   display: none; /* 1. 숨기기  */
+
+    2. 메인 메뉴에 마우스를 올렸을 때 - > 서브 메뉴보이게 .gnb hover
+    #wrap header nav .gnb > li:hover .lnb {display: flex;}
+
+    3. 
+
+-->
