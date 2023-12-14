@@ -12,21 +12,14 @@
     <style>
         /* min-width mobile 320 - > tablet 650 - >desktop 1200 순서 설계 */
         /* .h_bg {background-color: blueviolet;} */
-        /* 3은 새로 만드는 페이지 해설 */
-
         /* min-width mobile 320이상 - > */
-        @media screen and (min-width:320px) {
-
+        @media screen and (min-width:1px) { /* 320px - > 1px */
             /* 모바일 */
-            .h_bg {
-                background-color: #f1f1f1;
-            }
+            .h_bg {background-color: #f1f1f1;}
             .h_bg header {
-                padding: 0 20px;
-                height: 6px;
+                padding: 0 20px; height:64px;
                 display: flex;
                 flex-flow: row nowrap;
-                position: relative;
                 justify-content: space-between;
                 align-items: center;
                 position: relative;
@@ -37,27 +30,22 @@
         } /* 모바일 */
         .h_bg header h1 {}
         .h_bg header h1 a {}
-        .h_bg header .gnb {
-            display: none;
-        } /* 테블릿 데탑 보이는용 */
+        .h_bg header .gnb {display: none;} /* 테블릿 데탑 보이는용 */
         .h_bg header .gnb a {}
-        .h_bg header .all_nav {
-            display: block;
-        }
+        .h_bg header .all_nav {}
         .h_bg header .m_nav {
             height: 100vh;
             width: 226px;
             position: absolute;
-            top: 63px;
-            right: 0;
-            background-color: black;
+            top: 63px; right: 0;
+            background-color: #222;
             display: flex;
             flex-flow: column nowrap;
             padding: 0 20px;
             position: absolute;
             text-align: center;
         }
-        
+
         .h_bg header .m_nav a {
             color: #fff;
             border-bottom: 1px dashed #fff;
@@ -66,13 +54,13 @@
 
         main {
             height: 300vh;
-            background-color: yellow;
+            background:linear-gradient(180deg, black, violet);
         }
 
         footer {
             height: 100px;
-            background-color: yellowgreen;
-        } /* */
+            background-color: brown;
+        } /*  320 */
 
         @media screen and (min-with:650px) {
             .h_bg header .gnb {
