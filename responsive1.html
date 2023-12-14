@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <title>반응형과 적응형</title>
+    <style>
+        /* 디폴드값 */
+        /* max-width 큰 값 - > 작은 값 개발  */
+        body, html {background-color: yellowgreen;} /* 1201 ~ max */
+         /*@media 조건 max 또는 min 작성 시 ; 세미콜론 작성안함  */
+        @media screen and (max-width:1200px){
+            body, html {background-color: violet;} /* 961 ~ 1201 */
+            /* 브라우저 화면 너비를 줄여보면 핑크색으로 변한다. */
+        } /* 화면 너비가 1200 이하일때 */  
+        /* 중괄호 착각 조심하기. */
+        @media screen and (max-width:960px){ /* ? ~ 960 */
+            body, html {background-color: turquoise;}
+        }/* 화면 너비가 960 이하일 경우. */
+        @media screen and (max-width:760px){ /* 481 ~ 760 */
+            body,html {background-color: slateblue;}
+        }
+        @media screen and (max-width:480px) {/* min ~ 480 */ 
+            body, html {background-color: tomato;}
+        }
+        @media screen and (max-width:320px) {
+            body, html {background-color: brown;}
+        }/* 화면 너비가 320 이하일때  실제로는 사용안함 */
+    </style>
+</head>
+<body>
+    <h1>반응형웹 만들기</h1>
+    
+</body>
+</html>
+<!-- 
+1. 페이지가 모든 기기에 반응하는 웹 - 반응형웹 ex)애플
+
+모든 플랫폼에서 일관적인 콘텐츠를 사용자가 경험하게 해줍니다.
+새로된 오래된 기기 모두 정상
+숙련된 디자인 능력 등등 반응형이 더 어렵다.
+컨텐츠 수 등등에 성능 저하 - > 페이지가 하나만 있기에.
+--------------------------------------------------------
+반응형 제작 준비
+각 디바이스 해상도 이해하기
+
+320 mobile ex) 예전 스마트폰 아이폰5 
+480 
+760 tablet
+960
+1200 desktop 20인치  
+1600 
+--------------------------------------------------------
+뷰포트 이해하기.
+<meta name="viewport" content="">
+사용자보는 화면에 따라 최적화된 화면 보여준다.
+
+@media screen and (규칙) {실행명령어}
+
+@media print {실행 명령어} - > 프린트 할 때 
+
+@media (규칙) {실행명령어 전에 입력해둔 코드}
+--------------------------------------------------------
+min-width- > 최소 제한 너비 ( 기준 이상은 상대값 처리 이상 )
+max-width  - > 최대 제한 너비 설정 ( 기준 이하는 상대값 이하 )
+
+ex) @media screen min-width 320 
+
+1. 모바일부터 시작하는 경우 
+min-width 규칙 작은앖 - > 큰 값 순서로 320 ~ 
+
+2. 데스크탑부터 시작하는 경우 
+max-width 규칙 큰 값 - > 작은 값 순서로 작성 1200
+
+--------------------------------------------------------
+2. 적응형은 각 기기마다 페이지가 있다. ex) 네이버
+
+이미 만들어진 기기에 맞춰서 페이지 제작
+원하는 기기 플랫폼에 최적화된 크기 제공  
+광고 목적 컨텐츠 정확하게 보여줌 
+기기에 따라 형태 무너질 수 있다.
+새로운기기에 대응능력 떨어짐
+
+-->

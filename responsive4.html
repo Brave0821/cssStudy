@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>반응형 쇼핑몰</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+<style>
+    /* media 기준설정 전 1280~max */
+    main { /* desktop */
+            max-width: 1400px; /*  일정 창 까지는 안 커지다가 여기까지만 커져라 최대크기 제한 1400 */ 
+            width: calc(100% - 32px);
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            background-color: #f1f1f1;
+            margin: 0 auto;
+        }
+    main a { 
+        width: calc(100% / 5 - 80px / 5);
+        /* 전체 100% 아이템 수 5개 - 아이템 간격 20px x 4 = > 80 / 아이템 5개 */
+        margin-bottom: 20px; 
+    }
+    main a img {width: 100%;}
+    /* @media max-width는 이하를 주는 것 이기에 
+    정확한 치수를 적으면 그 이상의 페이지를 보여줄 수 없기에 
+    처음에 max의 경우에는 @media를 적용 x */
+    /* media 기준설정 전 1280~max 전 데스크탑 끝 */
+    /* 시작 태블릿 폰 시작 */
+    @media screen and (max-width:1280px) { /* 744 ~ 1279이하일때? 이 디자인으로 보여라 */
+        main a {width: calc(100% / 3 - 40px / 3);}
+    }
+    @media screen and (max-width:744px) { /* 320 ~ 743이하일때 이 디자인으로 보여라? */
+        main a {width: calc(50% - 10px);}
+    }
+    /* 끝 */
+</style>
+</head>
+<body>
+    <main>
+        <a href="#"><img src="./images_bird/01.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/02.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/03.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/04.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/05.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/06.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/07.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/08.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/09.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/10.jpg" alt=""></a>
+    </main> 
+    <!-- 10개 -->
+</body>
+</html>
+<!--
+
+320 mobile ex) 예전 스마트폰 아이폰5 
+480 
+760 tablet
+960
+1200 desktop 20인치  
+1600
+
+-->

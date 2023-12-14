@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>반응형 .h_bg header1</title>
+    <!-- cdn 주소 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* max 데탑 min 폰 */
+    
+        /* 데탑 */
+        .h_bg { /* 배경 옮기는 용도 */
+            /* position: fixed; left: 0; top: 0; width: 100%; */
+            /* fixed 사용하는 이유 header 모습 그대로 유지하며 고정하고 싶을때  */
+            position: sticky; top: -64px; /* top 좌표 -64는 해더의 높이 -32하면 중간만 보인다. */
+            /* sticky 사용자의 스크롤 위치에 따라 해더의 전부가 아닌 일부 영역부터 보여주고 싶을 때  */
+            background-color: #f5f5f5;
+            /* position: sticky; top: 0px;  */
+            /* 달라붙는다. 화면의 스크롤을 바로 인식하는 곳에 써야한다. 특정 영역만 고정된다. 높이가 64인데 해더가 딱 반만 32만 고정 시키고 싶다. 64만 고정시키고 싶으면 fixed*/
+        }
+        .h_bg header {
+            max-width: 1200px; 
+            width: calc(100% - 40px); 
+            /* 100%에 양옆 마진 2개 합 */
+            /* margin: 0 auto; */
+            border: 2px solid #000;
+            width: 100%; padding: 0 20px; height: 64px;
+            display: flex; flex-flow: row nowrap;
+            justify-content: space-between; align-items: center;
+        }
+        .h_bg header h1 {}
+        .h_bg header h1 a {}
+        .h_bg header .gnb {}
+        .h_bg header .gnb a {
+            margin-left: 16px;
+        }
+        .h_bg header .gnb a:first-child {margin-left: 0;}
+        /* 모바일용 숨기기 */
+        .h_bg header .all_nav {display: none;}
+        .h_bg header .all_nav .fa-bars {}
+        .h_bg header .m_nav {display: none;}
+        .h_bg header .m_nav a {}
+        /*  */
+        /* main + footer */
+        main {background: radial-gradient(circle, red,blue,green,yellow,violet); height: 300vh;}
+        footer {background-color: yellowgreen; height: 100px;}
+        /* 끝 */
+        /* 테블릿 */
+        @media screen and (max-width:1024px) {
+
+        }
+        /* 모바일 */
+        @media screen and (max-width:650px) {
+            .h_bg header {position: relative;}
+            .h_bg header .gnb {display: none;} /* 숨기기 */
+            .h_bg header .all_nav {display: block;}
+            .h_bg header .all_nav .fa-bars {}
+            .h_bg header .m_nav {
+                display: flex; flex-flow: column nowrap;
+                position: absolute;
+                top: 64px; right:0px; /* 201 */
+                background-color: #000;
+                /* justify-content: space-between; */
+                /* justify-content: 메인축에 수직인데  space-between; 양끝으로 보냈기에 세로로 쭉 떨어진 것 */
+                width: 226px; height: 100vh; /* 전체 */
+                text-align: center;
+                padding:0 20px;
+            }
+            .h_bg header .m_nav a {
+                color: #fff;
+                border-bottom:1px dashed #fff;
+                /* width: 186px; height: 16px; */
+                /* border: 1px solid #fff; */
+                padding: 20px 0;
+            }
+            .h_bg header .m_nav a:last-child {border-bottom: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="h_bg">
+        <header>
+        <!-- 모바일 태블릿 데탑 모두 포함 html  -->
+        <h1><a href="#">포인핸드</a></h1>
+        <nav class="gnb">
+            <a href="#">포인핸드란?</a>
+            <a href="#">보호소오는길</a>
+            <a href="#">입양문의</a>
+            <a href="#">초보집사 도움말</a>
+            <a href="#">행사/이벤트</a>
+        </nav>
+        <!-- 모바일용 탭 따로만듬.  -->
+        <a href="#" class="all_nav"><i class="fa-bars"></i></a>
+        <nav class="m_nav">
+            <a href="#">포인핸드란?</a>
+            <a href="#">보호소오는길</a>
+            <a href="#">입양문의</a>
+            <a href="#">초보집사 도움말</a>
+            <a href="#">행사/이벤트</a>
+        </nav>
+    </header>
+    </div>
+    <main>main</main>
+    <footer>footer</footer>
+</body>
+</html>
+<!-- 반응형 제작 준비
+각 디바이스 해상도 이해하기
+
+320 mobile ex) 예전 스마트폰 아이폰5 
+480 
+760 tablet
+960
+1200 desktop 20인치  
+1600  -->

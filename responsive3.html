@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>반응형 쇼핑몰</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        @media screen and (min-width:320px) {
+            main {
+                width: calc(100% - 32px);
+                margin: 0 auto;
+                /* 이거 왜? */
+                background-color: #f1f1f1;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+            }
+        }
+        /* - 앞 뒤에 여백이 있어야한다. 16은 마진값 calc는 계산기 margin 중앙 */
+        main a {
+            width: calc(50% - 10px);
+            /* margin: 0 auto; */
+            /* border: 1px solid #000; */
+            /* background-color: aqua; */
+            margin-bottom: 20px;
+        }
+        main a img {
+            width: 100%;
+        }
+        /*  */
+        @media screen and (min-width:744px) {
+            /* 320 ~ 744 */
+            main a { /* 13.3 */
+                width: calc(33.33% - 13.33px);
+                /* width: calc(100% / 3 - 40px / 3); */
+                /* margin: 0 auto; */ 
+                /* border: 1px solid #000; */
+                /* background-color: aqua; */
+            }
+        }
+        @media screen and (min-width:1280px) {
+            main {
+                max-width: 1400px;
+            }
+            main a {
+                width: calc(100% / 5 - 80px / 5);
+                /*width: calc(33.33% - 13.33px);*/
+            }
+        } 
+        /*  */
+    </style>
+</head>
+<body>
+    <main>
+        <a href="#"><img src="./images_bird/01.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/02.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/03.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/04.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/05.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/06.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/07.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/08.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/09.jpg" alt=""></a>
+        <a href="#"><img src="./images_bird/10.jpg" alt=""></a>
+    </main> <!-- 10개 -->
+</body>
+
+</html>
+<!-- 
+320 mobile ex) 예전 스마트폰 아이폰5 
+480 
+760 tablet
+960
+1200 desktop 20인치  
+1600  -->
