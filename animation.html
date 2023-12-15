@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>애니메이션</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .btn1 {
+            background-color: yellowgreen; padding: 30px;
+            font-size: 1rem;
+            transition : all 2s 1s; /* 앞 진행시간 뒤 바로 시작이 아니라 지정한 시간 이후 시작 끝 지연시간 */
+            /* transition: background-color 2s;
+            transition: font-size 2rem;
+            transition: padding 2s; */
+            /* transition : 효과를 주고 싶은 대상에 사용 천천히 배경색이 달라짐 */
+        }
+        .btn1:hover { /* 호버에는 달라지는 값만 사용 */
+            background-color: turquoise;
+            padding: 60px;
+            font-size: 2rem;
+        } /* 올리면 색 달라짐 */
+        /* 트랜스폼 ----------------------------------------------------------------- */
+        .box {
+            width: 100px; height: 100px; 
+            background-color: yellowgreen;
+            margin: 10px;
+        }
+        .box1 {transform:scaleX(2); transform-origin: left top;} /* transform:속성 :scaleX(2);값 */
+        /* 중심축 기준 대문자 X Y 붙이면 커짐 transform 자식 자손들도 전부 영향을 받는다. 즉 아이템 안에 내용도 같이 움직인다.*/
+        .box2 {transform: rotate(60deg); }
+        .box3 {transform: skewX(20deg); } 
+        /* .box4 {transform: translate(100px, 50px); } */
+        .box4 {transform: translate(200px); }
+        .box5 {transform: scaleY(1.2) rotate(10deg) translateX(50px);} 
+        /* 포지션에 리렉티브랑 기능이 같다. x는 100 y 50 
+        position :
+        */
+        .box6 {transform:scaleX(10) rotate(16deg) translateX(50px);
+            
+        }
+        .box6:hover {
+            font-size: 10rem;
+            color: teal;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><button type="button" class="btn1">button</button></li>
+        <!-- 우리가 배운거 모두 적용이 가능함 -->
+        <li><div class="box box1">A(scaleX)</div></li> <!-- 앞 공통이름 뒤 개별이름 -->
+        <li><div class="box box2">B(rotate)</div></li> <!-- 앞 공통이름 뒤 개별이름 -->
+        <li><div class="box box3">C(skewX)</div></li> <!-- 앞 공통이름 뒤 개별이름 -->
+        <li><div class="box box4">D(translate)</div></li> <!-- 앞 공통이름 뒤 개별이름 -->
+        <li><div class="box box5">E(scaleY(1.2) rotate(10deg) translateX(50px))</div></li> <!-- 앞 공통이름 뒤 개별이름 -->
+        <li><div class="box box6">Ftransform:scaleX(10) rotate(16deg) translateX(50px)</div></li> <!-- 앞 공통이름 뒤 개별이름 -->
+    </ul>
+    <p>/* 중요필기! 
+        js에서 나중에 "속성"을 가져올때 <br>
+        속성:transform: 값:scaleX(2); */</p>
+</body>
+</html>

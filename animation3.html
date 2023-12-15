@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>animation3</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .bg {
+            background-color: #269c26; position: relative;
+            width: 1000px; height: 700px; margin: 50px auto;
+            position: relative;
+        }
+        .bg img {
+            width: 200px; position: absolute;
+            
+            /* animation:; */
+        }
+        .bg .goal1 {left:20px; top: 20px;}
+        .bg .goal2 {left:40%; bottom: 20px;}
+        .bg .goal3 {right:20px; top:20px;}
+        .bg .ball {
+            width: 100px; height: 100px;
+            transform: translate(70px, 119px); /* 초기위치 */
+            animation: right400 5s infinite;
+            z-index: 999;
+            position: absolute;
+        }
+        .bg .ball img {width: 100px; margin: 42px;
+            position: absolute;
+        }
+        /* keyframes 작성위치 */
+
+        @keyframes right400 { /* 공을 오른쪽으로 보냄 */
+            0%{transform: translate(70px, 119px);} 
+            30%{transform:translate(450px, 578px);} 
+            60%{transform:translate(832px, 119px);} 
+        } /* skewY(200deg) translateX(850PX) */
+        
+        @keyframes right360 { /* 공을 오른쪽으로 보냄 */
+            0%{transform: retate(0deg);} 
+            100%{transform:retate(360deg);} 
+        } /* skewY(200deg) translateX(850PX) */
+</style>
+</head>
+<body>
+    <div class="bg">
+        <div class="ball"><img src="./animation_icon/football.png" alt=""></div>
+        <img src="./animation_icon/goal.png" class="goal1" alt="">
+        <img src="./animation_icon/goal.png" class="goal2" alt="">
+        <img src="./animation_icon/goal.png" class="goal3" alt="">
+    </div>
+</body>
+</html>
