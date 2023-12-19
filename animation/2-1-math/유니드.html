@@ -61,16 +61,50 @@
             display:flex; justify-content: space-between; align-items:center;
         }
         main .center h1 {color:#fff; display:flex; flex-flow:column nowrap; justify-content: space-between;}
-        main .center h1 span {font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
+        main .center h1 span {font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0; ;
+        
+            /* 애니메이션 추가 */
+        /* animation: scaletxt 1s linear alternate; */
+        }
+        /* ----------------------------------------------------------------------- */
+        /* 추가 span에다 class를 줘서 따로 움직이게 변환 */
+        
+        /* nth-child(1) */
+        main .center h1 .font1 {
+            font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0; color:#fff;
+            animation: top 0.5s both;
+        }
+        main .center h1 .font2 {
+            font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0; color:#fff;
+            animation: top 0.5s 0.5s both;;
+        }
+        /* ------------------------------------------------------------------------ */
         main .center .right {
             position:relative; right:174px; top:-100px;
+            /* 애니메이션 추가 */
+            animation: right 1.5s both;
         }
         main .center .right span {
             position:absolute; width:174px; height:174px;
+            /* 애니메이션 */
         }
-        main .center .right span:nth-child(1) {}
+        main .center .right span:nth-child(1) {
+            animation: rotate 20s linear alternate infinite;
+        }
         main .center .right span:nth-child(2) {text-align:center; line-height:174px;}
         /* animation */
+        @keyframes rotate { /* 기울 */
+            0%{transform: rotate(0);} 
+            100%{transform:rotate(360deg);} 
+        }
+        @keyframes right { /* 기울 */
+            0%{transform: translateX(100px);} 
+            100%{opacity:1; transform:translateX(0);} 
+        }
+        @keyframes top { 
+            0%{transform:translateY(0); opacity: 0;} 
+            100%{transform:translateY(-50px);opacity:1;} 
+        }
     </style>
 </head>
 <body>
@@ -149,8 +183,8 @@
         <main>
             <div class="center">
                 <h1>
-                    <span>고객이 필요한 것을</span>
-                    <span>먼저 생각합니다.</span>
+                    <span class="font1">고객이 필요한 것을</span>
+                    <span class="font2">먼저 생각합니다.</span>
                 </h1>
                 <div class="right">
                     <span><img src="images/unid/play_line_bg_small.png" alt=""></span>
