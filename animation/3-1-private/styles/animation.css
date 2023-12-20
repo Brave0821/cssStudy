@@ -1,0 +1,14 @@
+
+/* 바퀴 굴러가는 것  */
+
+@keyframes tire {
+    0%{transform: rotate(0);} /* 시작위치 */
+    100%{transform: rotate(360deg);} /* 도착위치 */
+}
+
+/* 배경 움직이는 것 */
+@keyframes bg {
+    0%{background-position-x:0;} /* 시작위치 */
+    100%{background-position-x:1000px;} /* 도착위치 */
+}
+

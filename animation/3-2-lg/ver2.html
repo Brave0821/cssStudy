@@ -42,6 +42,12 @@
             background:url(images/bg_flow.png) repeat-x left top;
             height:150px; width:100%;
             position:absolute; z-index:30;
+            animation: bg 10s linear infinite;
+        }
+
+        @keyframes bg {
+        0%{background-position-x:0;} /* 시작위치 */
+        100%{background-position-x:-1000px;} /* 도착위치 */
         }
     </style>
 </head>
