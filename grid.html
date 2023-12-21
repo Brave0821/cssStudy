@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>그리듣</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- 모바일 개발에 많이씀. 제한이 없음. -->
+    <style>
+        .container {
+            background-color: yellowgreen;
+            padding: 20px; 
+            /* display: inline-grid; 내용만큼만 인식한다.  */
+            display:grid; /* justify-content: space-evenly */
+            /* 아이템 (자식) 크기조절 */
+            /* grid-template-rows: 50px 100px 150px 50px;  */
+            /* 1234 자식순서대로 */
+            grid-template-rows:50px repeat(2,100px) 50px;
+            /* 50px1개 */
+            /* 4개가 100px */
+            grid-template-scolumns: 100px; 
+        }
+        .container .item {
+            background-color: turquoise;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

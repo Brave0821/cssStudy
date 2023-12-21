@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="">
+    <meta name="description"content="">
+    <meta name="keywords"content="">
+    <title>여러 줄 말줄임 처리</title>
+    <style>
+        #list {
+            width: 800px; margin: 50px auto 0;
+            display: flex; flex-flow:row nowrap ;
+        }
+        #list li {
+            display: flex; flex-flow: column nowrap;
+        }
+        #list li:first-child {margin-right: 20px;}
+        #list li img {width: 100%;}
+        #list li a {
+            background-color: silver;
+            /* margin-bottom: 100px; */
+            display:-webkit-box; /* line, box-orient 필수 보조 속성 */
+            display: -moz-box;
+            display: -o-box;
+            -webkit-line-clamp: 3; /* 한번에 보이는 줄 수  */
+            -moz-line-clamp: 3;
+            -o-line-clamp: 3;
+            -webkit-box-orient: vertical; /* 글자의 방향 */
+            -moz-box-orient: vertical; /* 글자의 방향 */
+            -o-box-orient: vertical; /* 글자의 방향 */
+            overflow: hidden; /* 해당 영역안에서만 보이게하는 추가옵션기능 */
+            line-height: 1.7;
+        }
+        #list li span {padding-top: 30px;}
+        /* 
+        CSS 3 크로스브라우징 - 안정성을 올려주는 브라우저 엔진 명령 별로로 설정
+        속성 앞에 브라우저에서 올바르게 실행되기 위한 엔진 작성 
+        -WEBKIT- 크롬 사파리 
+        -MOZ- 파이어폭스 
+        -O- 오페라
+        -ms- 익스플로러(망함)
+        */
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li> <!-- 이미지 주소 복사. 연습용 -->
+            <img src="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fCVFRCU4MSVBQyVFQiVBNiVBQyVFQyU4QSVBNCVFQiVBNyU4OCVFQyU4QSVBNHxlbnwwfHwwfHx8MA%3D%3D" alt="크리스마스 사진">
+            <a href="#">
+                12월 25일은 크리스마스 공휴일입니다.<br>
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+            </a>
+            <span>20,0000원</span>
+        </li>
+        <li> <!-- 이미지 주소 복사. 연습용 -->
+            <img src="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fCVFRCU4MSVBQyVFQiVBNiVBQyVFQyU4QSVBNCVFQiVBNyU4OCVFQyU4QSVBNHxlbnwwfHwwfHx8MA%3D%3D" alt="크리스마스 사진">
+            <a href="#">
+                12월 25일은 크리스마스 공휴일입니다.<br>
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+                12월 25일은 크리스마스 공휴일입니다.
+            </a>
+            <span>20,0000원</span>
+        </li>
+    </ul>
+</body>
+</html>
